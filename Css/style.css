@@ -5,6 +5,8 @@ div {
     display: flex;
 }
 
+.grey {background: #F6F6F6;}
+
 .mid {
     width: 80%;
     margin:  0 auto;
@@ -70,7 +72,7 @@ h2 {
     justify-content: space-between;
     width: 100%;
 }
-.line {
+hr {
     border: 1px solid #828282;
     width: 100%;
 }
@@ -124,7 +126,7 @@ h2 {
     margin-top: 83px;
     width: 100%;
 }
-.program {
+.program-wrapper {
     flex-direction: column;
     align-items: center;
 }
@@ -174,7 +176,7 @@ h2 {
     display: flex;
     align-items: center;
     background: #070707;
-    border-radius: 30%;
+    border-radius: 50px;
 }
 .btn {
     padding: 5px;
@@ -207,7 +209,7 @@ footer {
     .main{
       max-width: 750px;
     }
-    .desktop-navigation, .line, .desktop {
+    .desktop-navigation, hr, .desktop {
         display: none;
     }
     .title {
@@ -249,6 +251,10 @@ footer {
 
 
 /* Byrger menu */
+
+.menu-open-item > * + * {
+    margin-top: 23px;
+}
 
 .menu-btn {
     display: block;
