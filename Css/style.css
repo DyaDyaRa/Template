@@ -46,15 +46,7 @@ h2 {
     margin-bottom: 18px;
 }
 
-.mobile-navigation,
-.byrger-menu,
-.menu-open {
-    display: none;
-}
-.mobile {
-    align-self: flex-end;
-    padding: 15px;
-}
+
 
 /* header */
 
@@ -228,16 +220,6 @@ footer {
         justify-content: space-between;
         margin-top: 83px;
     }
-    .byrger-menu {
-        display: block;
-        position: absolute;
-        right: 30px;
-        top: 80px;
-        z-index: 10;
-    }
-    .menu-open {
-        display: flex;
-    }
     .profession-location {
         margin-bottom: 37px;
     }
@@ -252,64 +234,81 @@ footer {
 
 /* Byrger menu */
 
-.menu-open-item > * + * {
-    margin-top: 23px;
-}
-
-.menu-btn {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
+.byrger-menu {
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
+    top: -125px;
+    right: -95%;
 }
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after {
-    position: absolute;
-    top: 50%; margin-top: -1px;
-    left: 50%; margin-left: -10px;
-    width: 20px;
+.line {
+    width: 25px;
     height: 2px;
-    background-color: #222;
-}
-.menu-btn span::before,
-.menu-btn span::after {
+    background: black;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+  }
+.line::after,
+.line::before {
     content: '';
-    display: block;
-    transition: 0.2s;
+    width: 25px;
+    height: 2px;
+    background: black;
+    position: absolute;
 }
-.menu-btn span::before{
-    transform: translateY(-5px);
+  .line::after {
+    margin-top: 5px;
 }
-.menu-btn span::after {
-    transform: translateY(5px);
+  .line::before {
+    margin-top: -5px;
 }
-.menu-btn-active span{
+
+/* Active style byrger menu  */
+
+.Act::after {
+    transform: rotate(-45deg);
+    margin-top: 0;
+    transition: all 0.3s;  
+}
+.Act::before {
+    transform: rotate(45deg);
+    margin-top: 0;
+    transition: all 0.3s;
+}
+.Act {
     height: 0;
 }
-.menu-btn-active span:before {
-    transform: rotate(45deg);
-}
-.menu-btn-active span:after {
-    transform: rotate(-45deg);
-}
-.menu-open {
-    background: #ffffff;
+
+/* menu-open byrger menu */
+
+.mobile-navigation-menu {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 375px;
     position: absolute;
-    left: 0;
-    top: -200%;
-    margin-top: 75px;
+    background: #FFFFFF;
+    height: 812px;
+    width: 375px;
+    left: 0px;
+    top: -1000px;
+    padding: 83px 0 57px 26px;
     transition: all 0.5s;
 }
-.menu-open > * + * {
-    margin-top: 65px;
+.actMenu {
+    top: 0px;
+
 }
-.menu-open-act{
-      top:0px;
+.menu-open-item > * + * {
+    margin-top: 67px;
 }
+.mobile {
+    align-self: flex-end;
+    margin: 150px 28px 0 0;
+}
+
+
+

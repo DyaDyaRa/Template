@@ -1,6 +1,19 @@
-$(document).ready(function() {
-	$('.menu-btn, a.catalog, a.catalog-home').click(function(){
-        $('.menu-btn').toggleClass('menu-btn-active');
-        $('.menu-open').toggleClass('menu-open-act');
-	});
-});
+
+let lineAct = document.querySelector('.line');
+let menuOpen = document.querySelector('.mobile-navigation-menu');
+
+
+document.querySelector('.byrger-menu').onclick = () => {
+  lineAct.classList.toggle('Act');
+  menuOpen.classList.toggle('actMenu');
+}
+
+document.querySelector('.catalog').onclick = () => {
+        menuOpen.classList.toggle('actMenu');
+        lineAct.classList.toggle('Act');
+}
+
+document.querySelector('.catalog-home').onclick = () => {
+        menuOpen.classList.toggle('actMenu');
+        lineAct.classList.toggle('Act');
+}
